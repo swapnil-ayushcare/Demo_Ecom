@@ -27,9 +27,14 @@ export function CartSummary({ cart }: { cart: Cart }) {
         worked out at checkout.
       </p>
 
-      <Link className={styles.continue} href="/">
-        Keep shopping
-      </Link>
+      <div className={styles.actions}>
+        <Link className={styles.checkout} href="/checkout" data-testid="cart-checkout">
+          Checkout
+        </Link>
+        <Link className={styles.continue} href="/">
+          Keep shopping
+        </Link>
+      </div>
     </section>
   );
 }

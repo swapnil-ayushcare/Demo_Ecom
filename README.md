@@ -60,6 +60,13 @@ test key. The key id is safe to load on the checkout screen; the key secret is
 server-only and must never be committed. Rotating the test key in `.env` is
 enough to change checkout configuration — no code change is needed.
 
+For an offline checkout, set `RAZORPAY_SANDBOX=1` in `.env`. The shop then uses
+the bundled Razorpay sandbox instead of calling the Razorpay API: it makes a
+provider-shaped test payment and the server verifies its HMAC through the same
+path as a real test-mode payment. No network call and no real charge are made.
+The automated checkout tests use this sandbox. Delivery is free from ₹500 and
+₹49 below that, always calculated on the server.
+
 No secret or database password is committed to this repository.
 
 ## 4. Migrate and seed
