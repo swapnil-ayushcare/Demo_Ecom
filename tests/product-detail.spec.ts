@@ -256,7 +256,7 @@ test.describe('product detail not found and phone composition', () => {
     }
     originalDatabase = base;
     const databaseUrl = await prepareDatabase(base, PRODUCT_DETAIL_DATABASE);
-    server = await startServer(3107, { DATABASE_URL: databaseUrl });
+    server = await startServer(3110, { DATABASE_URL: databaseUrl });
     process.env.DATABASE_URL = databaseUrl;
     resetEnvCache();
   });

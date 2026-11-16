@@ -95,7 +95,7 @@ test.describe('category product listing', () => {
     }
     originalDatabase = base;
     const databaseUrl = await prepareDatabase(base, CATEGORY_DATABASE);
-    server = await startServer(3107, { DATABASE_URL: databaseUrl });
+    server = await startServer(3108, { DATABASE_URL: databaseUrl });
     process.env.DATABASE_URL = databaseUrl;
     resetEnvCache();
   });

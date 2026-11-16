@@ -1,9 +1,27 @@
 import { spawn, type ChildProcess } from 'node:child_process';
+import { createServer } from 'node:net';
 
 export interface RunningServer {
   baseURL: string;
   stop: () => Promise<void>;
   logs: () => string;
+}
+
+async function assertPortFree(port: number): Promise<void> {
+  await new Promise<void>((resolve, reject) => {
+    const probe = createServer();
+    probe.once('error', (error: NodeJS.ErrnoException) => {
+      reject(
+        new Error(
+          `Port ${port} is already in use (${error.code ?? error.message}); give this spec its own port so parallel workers cannot attach to another spec's server`,
+        ),
+      );
+    });
+    probe.once('listening', () => {
+      probe.close(() => resolve());
+    });
+    probe.listen(port, '127.0.0.1');
+  });
 }
 
 async function waitForHealth(baseURL: string, timeoutMs = 60_000): Promise<void> {
@@ -28,6 +46,7 @@ export async function startServer(
   port: number,
   extraEnv: Record<string, string | undefined> = {},
 ): Promise<RunningServer> {
+  await assertPortFree(port);
   const baseURL = `http://127.0.0.1:${port}`;
   let logText = '';
   const child: ChildProcess = spawn('npm', ['start'], {
