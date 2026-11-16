@@ -1,0 +1,7 @@
+{
+  "slug": "accounts-sign-in-session",
+  "title": "Sign-in, sign-out and session persistence",
+  "description": "A registered customer signs in, stays signed in through a secure session, and signs out.",
+  "routes": [{ "path": "/sign-in", "title": "Sign in" }],
+  "navigation": []
+}
