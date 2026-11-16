@@ -16,7 +16,8 @@
     "typecheck": "tsc --noEmit",
     "test": "tsx scripts/test-run.ts",
     "test:e2e": "playwright test --workers=4",
-    "test:unit": "playwright test tests/money.spec.ts --workers=1"
+    "test:unit": "playwright test tests/money.spec.ts --workers=1",
+    "build:hosting": "node scripts/build-hosting.mjs"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

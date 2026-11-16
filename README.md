@@ -6,8 +6,11 @@ handlers on top of PostgreSQL, with environment-only configuration, a versioned
 migration, an idempotent seed, and a feature registry that discovers a
 capability dropped into `src/features/`.
 
-The shop runs locally. There is no hosting project, cloud resource, public URL,
-Firebase configuration or publish script to create.
+The shop runs locally. The shop itself has no hosted storefront, cloud database
+or public URL: you install and run it on your own machine. The release pipeline
+publishes one static release marker to Firebase Hosting for verification. That
+marker explains the local install path and carries no catalogue, customer or
+order data; it is not the shop.
 
 ## Prerequisites
 
@@ -166,13 +169,18 @@ src/lib/            shared, framework-free helpers such as INR money
 src/server/         environment, database, catalogue, sessions, registry
 src/test/           fixture factory for unattended runs
 tests/              Playwright specs for the foundation contract
-scripts/            environment-checked Next.js runner and test runner
+scripts/            environment-checked Next.js runner, test runner and release marker build
+orbit/              the release pipeline's static marker deploy script
 ```
 
 ## Distribution
 
 The shippable form is this repository revision plus the lockfile-pinned
 dependency tree and the build output produced by that revision. There is no
-hosted deployment to configure. A person receiving the source follows the steps
-above and runs the tests to prove the package starts and the shop works
-locally.
+hosted deployment of the shop to configure. A person receiving the source
+follows the steps above and runs the tests to prove the package starts and the
+shop works locally.
+
+The only published page is the static release marker built by
+`npm run build:hosting` into `hosting-dist/`. It is not the shop and holds no
+product, customer or order data.

@@ -1,0 +1,179 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(29, 27, 22, 0.12);
+}
+
+.heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--hairline);
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.clear {
+  font-size: 13px;
+  color: var(--green);
+  text-underline-offset: 3px;
+  padding: 6px 2px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0;
+}
+
+.select,
+.input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  padding: 10px 12px;
+}
+
+.select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 20px,
+    calc(100% - 13px) 20px;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 36px;
+}
+
+.select:focus,
+.input:focus {
+  outline: 2px solid var(--saffron);
+  outline-offset: 1px;
+}
+
+.priceRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.priceField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  min-width: 0;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper);
+  padding-left: 10px;
+  min-width: 0;
+}
+
+.amount:focus-within {
+  outline: 2px solid var(--saffron);
+  outline-offset: 1px;
+}
+
+.rupee {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.amount .input {
+  border: 0;
+  background: transparent;
+  min-width: 0;
+}
+
+.amount .input:focus {
+  outline: none;
+}
+
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--green);
+  flex: none;
+}
+
+.submit {
+  border: 0;
+  border-radius: 999px;
+  background: var(--saffron);
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 11px 20px;
+  cursor: pointer;
+  transition: background 140ms ease-out;
+}
+
+.submit:hover {
+  background: #c45f27;
+}
+
+.error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--clay);
+}
+
+@media (max-width: 520px) {
+  .priceRow {
+    grid-template-columns: 1fr;
+  }
+}
