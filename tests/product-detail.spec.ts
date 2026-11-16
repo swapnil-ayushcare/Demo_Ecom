@@ -206,6 +206,10 @@ test.describe('product detail', () => {
     await expect(page.getByRole('spinbutton', { name: 'Quantity' })).toHaveValue('2');
     await page.getByRole('button', { name: 'Decrease quantity' }).click();
     await expect(page.getByRole('spinbutton', { name: 'Quantity' })).toHaveValue('1');
+
+    await addButton.click();
+    await expect(page.getByText('Added to your cart.')).toBeVisible();
+    await expect(page.getByTestId('cart-count')).toHaveText('1');
   });
 
   test('product detail holds its composition at 375 and 1440', async ({ page }) => {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Check, Minus, Plus, ShoppingBag } from 'lucide-react';
 import styles from './AddToCartButton.module.css';
 
@@ -28,6 +29,7 @@ export function AddToCartButton({
   inStock,
   stockQuantity,
 }: AddToCartButtonProps) {
+  const router = useRouter();
   const maxQuantity = Math.max(1, Math.min(stockQuantity, MAX_LINE_QUANTITY));
   const [quantity, setQuantity] = useState(1);
   const [status, setStatus] = useState<Status>('idle');
@@ -73,6 +75,7 @@ export function AddToCartButton({
       }
 
       setStatus('added');
+      router.refresh();
     } catch {
       setStatus('error');
       setMessage('We could not reach the shop. Check your connection and try again.');
