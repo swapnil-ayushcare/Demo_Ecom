@@ -12,7 +12,8 @@ const PORT = 3102;
 
 const SHARED_ENTRY_FILES = [
   'src/app/layout.tsx',
-  'src/app/page.tsx',
+  'src/app/(shop)/layout.tsx',
+  'src/app/(shop)/page.tsx',
   'src/app/[...slug]/page.tsx',
   'src/app/api/features/route.ts',
   'src/components/ui/AppShell.tsx',
