@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Three kraft-covered ruled notebooks fanned on a desk">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="300" r="194" fill="#FFFDF8" stroke="#DED4C4"/>
+  <g stroke="#1D1B16" stroke-width="4">
+    <rect x="164" y="238" width="250" height="176" rx="6" fill="#C9A26B" transform="rotate(-8 289 326)"/>
+    <rect x="186" y="220" width="250" height="176" rx="6" fill="#D8B784" transform="rotate(-2 311 308)"/>
+    <rect x="208" y="206" width="250" height="176" rx="6" fill="#E8D3AA"/>
+  </g>
+  <g stroke="#6B6358" stroke-width="2.5" opacity=".7">
+    <path d="M240 250h186M240 274h186M240 298h150M240 322h186M240 346h120"/>
+  </g>
+  <rect x="208" y="206" width="24" height="176" fill="#B9482F"/>
+</svg>

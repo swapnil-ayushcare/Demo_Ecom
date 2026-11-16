@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Paper pouch of deep red chilli powder with a wooden spoon">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="296" r="182" fill="#FFFDF8" stroke="#DED4C4"/>
+  <path d="M222 156h156l20 56H202z" fill="#B9482F"/>
+  <path d="M202 212h196v206l-24 34H226l-24-34z" fill="#FFFDF8" stroke="#1D1B16" stroke-width="4"/>
+  <rect x="230" y="264" width="140" height="112" rx="4" fill="#B9482F"/>
+  <text x="300" y="306" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#FFFDF8">KASHMIRI</text>
+  <text x="300" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#FFFDF8">CHILLI POWDER</text>
+  <text x="300" y="356" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#F2B544">250 g</text>
+  <path d="M392 402l58-96" stroke="#6B6358" stroke-width="14" stroke-linecap="round"/>
+  <ellipse cx="380" cy="418" rx="40" ry="26" fill="#D96C2F"/>
+  <ellipse cx="380" cy="412" rx="30" ry="17" fill="#B9482F"/>
+</svg>

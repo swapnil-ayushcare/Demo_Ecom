@@ -1,0 +1,142 @@
+{
+  "categories": [
+    {
+      "slug": "pantry",
+      "name": "Pantry & Spices",
+      "description": "Pepper, chilli, tea and the everyday jars a kitchen reaches for.",
+      "sortOrder": 10
+    },
+    {
+      "slug": "kitchen",
+      "name": "Kitchen & Home",
+      "description": "Steel, cotton and brass that earn their place on the shelf.",
+      "sortOrder": 20
+    },
+    {
+      "slug": "care",
+      "name": "Personal Care",
+      "description": "Soap and oil made in small batches, plainly labelled.",
+      "sortOrder": 30
+    },
+    {
+      "slug": "desk",
+      "name": "Paper & Desk",
+      "description": "Notebooks and bags for the work that leaves the house.",
+      "sortOrder": 40
+    }
+  ],
+  "products": [
+    {
+      "slug": "malabar-black-pepper",
+      "name": "Malabar Black Pepper",
+      "description": "Whole Tellicherry peppercorns, sun-dried and packed in a 200 g glass jar. Pungent, warm and freshly milled at home.",
+      "categorySlug": "pantry",
+      "pricePaise": 28550,
+      "stockQuantity": 42,
+      "images": [
+        { "url": "/products/pepper.svg", "alt": "Glass jar of whole black peppercorns on a paper label" },
+        { "url": "/products/pepper-detail.svg", "alt": "Close view of dark, wrinkled peppercorns" },
+        { "url": "/products/pepper-label.svg", "alt": "The paper label tied to the pepper jar" }
+      ]
+    },
+    {
+      "slug": "kashmiri-chilli-powder",
+      "name": "Kashmiri Chilli Powder",
+      "description": "Deep red, mild heat, 250 g. Ground from whole dried chillies for colour and a rounded warmth.",
+      "categorySlug": "pantry",
+      "pricePaise": 19000,
+      "stockQuantity": 60,
+      "images": [
+        { "url": "/products/chilli.svg", "alt": "Paper pouch of deep red chilli powder with a wooden spoon" }
+      ]
+    },
+    {
+      "slug": "assam-ctc-tea",
+      "name": "Assam CTC Tea",
+      "description": "A strong, malty daily cup from the Assam valley. 500 g foil-lined pouch with a clip.",
+      "categorySlug": "pantry",
+      "pricePaise": 32000,
+      "stockQuantity": 35,
+      "images": [
+        { "url": "/products/tea.svg", "alt": "Pouch of Assam tea beside a glass cup of dark tea" }
+      ]
+    },
+    {
+      "slug": "steel-tumbler-set",
+      "name": "Steel Tumbler Set",
+      "description": "Six unpolished stainless steel tumblers, 200 ml each. Heavy enough for hot tea, plain enough for water.",
+      "categorySlug": "kitchen",
+      "pricePaise": 64900,
+      "stockQuantity": 18,
+      "images": [
+        { "url": "/products/tumblers.svg", "alt": "Six stainless steel tumblers stacked beside one another" }
+      ]
+    },
+    {
+      "slug": "cotton-kitchen-towel",
+      "name": "Cotton Kitchen Towel",
+      "description": "A plain woven cotton towel that gets softer with every wash. 45 x 70 cm, unbleached.",
+      "categorySlug": "kitchen",
+      "pricePaise": 14900,
+      "stockQuantity": 75,
+      "images": [
+        { "url": "/products/towel.svg", "alt": "Folded unbleached cotton kitchen towel" }
+      ]
+    },
+    {
+      "slug": "brass-puja-diya",
+      "name": "Brass Puja Diya",
+      "description": "A small hand-finished brass lamp with a sturdy base and a clean, even flame. 6 cm tall.",
+      "categorySlug": "kitchen",
+      "pricePaise": 39900,
+      "stockQuantity": 22,
+      "images": [
+        { "url": "/products/diya.svg", "alt": "Small brass oil lamp with a lit cotton wick" }
+      ]
+    },
+    {
+      "slug": "neem-turmeric-soap",
+      "name": "Neem & Turmeric Soap",
+      "description": "Three cold-processed bars with neem leaf and turmeric. No palm oil, no synthetic colour.",
+      "categorySlug": "care",
+      "pricePaise": 13500,
+      "stockQuantity": 90,
+      "images": [
+        { "url": "/products/soap.svg", "alt": "Three unwrapped green-toned soap bars stacked on paper" }
+      ]
+    },
+    {
+      "slug": "coconut-hair-oil",
+      "name": "Coconut Hair Oil",
+      "description": "Slow-infused coconut oil with curry leaf in a 200 ml amber bottle. Warm it between your palms.",
+      "categorySlug": "care",
+      "pricePaise": 21000,
+      "stockQuantity": 48,
+      "images": [
+        { "url": "/products/oil.svg", "alt": "Amber glass bottle of coconut hair oil with a cork stopper" }
+      ]
+    },
+    {
+      "slug": "ruled-notebook-pack",
+      "name": "Ruled Notebook, Pack of 3",
+      "description": "Three A5 notebooks with 96 ruled pages, sewn binding and a plain kraft cover that takes a pen.",
+      "categorySlug": "desk",
+      "pricePaise": 17500,
+      "stockQuantity": 120,
+      "images": [
+        { "url": "/products/notebook.svg", "alt": "Three kraft-covered ruled notebooks fanned on a desk" }
+      ]
+    },
+    {
+      "slug": "jute-shopping-bag",
+      "name": "Jute Shopping Bag",
+      "description": "A roomy, double-stitched jute bag with cotton handles. Folds flat, carries the week's vegetables.",
+      "categorySlug": "desk",
+      "pricePaise": 24900,
+      "stockQuantity": 40,
+      "images": [
+        { "url": "/products/bag.svg", "alt": "Natural jute shopping bag with cotton handles" }
+      ]
+    }
+  ]
+}

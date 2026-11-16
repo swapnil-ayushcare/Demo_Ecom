@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Six stainless steel tumblers stacked beside one another">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="300" r="194" fill="#FFFDF8" stroke="#DED4C4"/>
+  <g stroke="#1D1B16" stroke-width="4" fill="#F7F1E7">
+    <path d="M134 236h74v182a20 20 0 0 1-20 20h-34a20 20 0 0 1-20-20z"/>
+    <path d="M214 222h74v196a20 20 0 0 1-20 20h-34a20 20 0 0 1-20-20z"/>
+    <path d="M294 236h74v182a20 20 0 0 1-20 20h-34a20 20 0 0 1-20-20z"/>
+    <path d="M374 222h74v196a20 20 0 0 1-20 20h-34a20 20 0 0 1-20-20z"/>
+  </g>
+  <g fill="#6B6358" opacity=".45">
+    <ellipse cx="171" cy="236" rx="37" ry="10"/><ellipse cx="251" cy="222" rx="37" ry="10"/>
+    <ellipse cx="331" cy="236" rx="37" ry="10"/><ellipse cx="411" cy="222" rx="37" ry="10"/>
+  </g>
+  <path d="M163 268v128M243 256v142M323 268v128M403 256v142" stroke="#DED4C4" stroke-width="3"/>
+</svg>

@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local configuration and secrets
+.env
+.env.local
+.env.*.local
+
+# Test output
+test-results/
+playwright-report/
+blob-report/
+coverage/
+
+# Editor and OS noise
+.DS_Store
+.idea/
+.vscode/

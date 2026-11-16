@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Three unwrapped green-toned soap bars stacked on paper">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="300" r="194" fill="#FFFDF8" stroke="#DED4C4"/>
+  <g stroke="#1D1B16" stroke-width="4">
+    <rect x="152" y="336" width="296" height="86" rx="24" fill="#A8BE9B"/>
+    <rect x="176" y="264" width="248" height="78" rx="22" fill="#BFD0AF"/>
+    <rect x="200" y="198" width="200" height="70" rx="20" fill="#D6E2C8"/>
+  </g>
+  <g fill="#1F5C4A" font-family="Georgia, serif" text-anchor="middle">
+    <text x="300" y="240" font-size="17">NEEM AND TURMERIC</text>
+    <text x="300" y="304" font-size="15">COLD PROCESSED</text>
+    <text x="300" y="382" font-size="14">THREE BARS</text>
+  </g>
+  <g fill="#1F5C4A"><ellipse cx="238" cy="228" rx="4" ry="10"/><ellipse cx="266" cy="222" rx="4" ry="12"/><ellipse cx="352" cy="226" rx="4" ry="11"/></g>
+</svg>
