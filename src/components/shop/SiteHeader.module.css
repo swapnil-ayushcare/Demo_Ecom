@@ -149,7 +149,7 @@
     justify-self: end;
   }
 
-  .action span {
+  .actionLabel {
     position: absolute;
     width: 1px;
     height: 1px;

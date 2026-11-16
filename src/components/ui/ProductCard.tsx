@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Product } from '@/server/catalogue/types';
 import { PriceTag } from './PriceTag';
+import { AddToCartButton } from '@/features/cart/AddToCartButton';
 import styles from './ProductCard.module.css';
 
 function stockLabel(product: Product): string {
@@ -47,6 +48,11 @@ export function ProductCard({ product }: { product: Product }) {
           <PriceTag amountPaise={product.pricePaise} size="sm" label={product.name} />
           <span className={`${styles.stock} ${stockClass}`}>{stockLabel(product)}</span>
         </div>
+        <AddToCartButton
+          productId={product.id}
+          name={product.name}
+          inStock={product.inStock}
+        />
       </div>
     </article>
   );

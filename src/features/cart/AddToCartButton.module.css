@@ -1,0 +1,53 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 140ms ease-out,
+    color 140ms ease-out;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.button:disabled {
+  border-color: var(--hairline);
+  color: var(--muted);
+  background: var(--paper);
+  cursor: not-allowed;
+}
+
+.message,
+.status {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.message {
+  color: var(--clay);
+}
+
+.status {
+  color: var(--green);
+}

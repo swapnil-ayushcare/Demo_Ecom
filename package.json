@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "tsx scripts/run-next.ts dev",
     "build": "next build",
-    "build:hosting": "tsx scripts/build-hosting.ts",
+    "build:hosting": "node scripts/build-hosting.mjs",
     "start": "tsx scripts/run-next.ts start",
     "migrate": "tsx db/migrate.ts",
     "seed": "tsx db/seed.ts",
