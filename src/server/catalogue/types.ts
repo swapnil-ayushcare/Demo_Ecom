@@ -36,6 +36,9 @@ export interface Product {
 export interface ProductListOptions {
   categorySlug?: string;
   search?: string;
+  minPricePaise?: number;
+  maxPricePaise?: number;
+  inStockOnly?: boolean;
   includeArchived?: boolean;
 }
 

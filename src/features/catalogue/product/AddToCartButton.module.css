@@ -1,0 +1,138 @@
+.purchase {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--hairline);
+}
+
+.quantityRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.quantityLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.stepButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.stepButton:hover:not(:disabled) {
+  background: var(--paper);
+}
+
+.stepButton:disabled {
+  color: #a89f92;
+  cursor: not-allowed;
+}
+
+.quantityInput {
+  width: 48px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--hairline);
+  border-right: 1px solid var(--hairline);
+  background: transparent;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+  -moz-appearance: textfield;
+}
+
+.quantityInput::-webkit-outer-spin-button,
+.quantityInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantityInput:focus {
+  outline: none;
+}
+
+.stepper:focus-within {
+  outline: 2px solid var(--saffron);
+  outline-offset: 2px;
+}
+
+.addButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--saffron);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 150ms ease-out,
+    transform 150ms ease-out;
+}
+
+.addButton:hover:not(:disabled) {
+  background: #c45f27;
+}
+
+.addButton:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.addButton:disabled {
+  background: #d8cfc1;
+  border-color: #c9beae;
+  color: #6b6358;
+  cursor: not-allowed;
+}
+
+.help {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.status {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.error {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--clay);
+}
