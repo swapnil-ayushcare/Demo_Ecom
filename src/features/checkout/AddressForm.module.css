@@ -1,0 +1,132 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.input {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 2px;
+  border-color: var(--saffron);
+}
+
+.inputError {
+  border-color: var(--clay);
+}
+
+.help {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--clay);
+}
+
+.error svg {
+  flex: none;
+  margin-top: 1px;
+}
+
+.formError {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--clay);
+  border-radius: 8px;
+  background: #fbe9e3;
+  color: var(--clay);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.formError svg {
+  flex: none;
+  margin-top: 1px;
+}
+
+.formError p {
+  margin: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+.pincodeField {
+  max-width: 220px;
+}
+
+.submit {
+  min-height: 48px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--saffron);
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.submit:hover:not(:disabled) {
+  background: #c45f27;
+}
+
+.submit:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+@media (max-width: 520px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pincodeField {
+    max-width: none;
+  }
+}

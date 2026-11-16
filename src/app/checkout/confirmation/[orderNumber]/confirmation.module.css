@@ -1,0 +1,254 @@
+.band {
+  max-width: 76ch;
+  padding-bottom: 26px;
+  margin-bottom: 28px;
+  border-bottom: 1px dashed var(--hairline);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 14px;
+  padding: 7px 13px;
+  border: 1px solid rgba(31, 92, 74, 0.35);
+  border-radius: 2px;
+  background: #eef4f0;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  font-weight: 600;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.2vw, 50px);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.lede {
+  margin: 14px 0 0;
+  max-width: 58ch;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #403b32;
+}
+
+.lede strong {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.card {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(29, 27, 22, 0.08);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--saffron);
+}
+
+.cardTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.items {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 12px 0;
+  border-top: 1px dashed var(--hairline);
+  border-bottom: 1px dashed var(--hairline);
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+.itemName {
+  color: #403b32;
+}
+
+.itemQty {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.itemAmount {
+  flex: none;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.totals {
+  margin: 0;
+  padding: 12px 0 0;
+}
+
+.totalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 5px 0;
+}
+
+.totalRow dt {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.totalRow dd {
+  margin: 0;
+  font-size: 15px;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.free {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.grandRow {
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--hairline);
+  align-items: flex-end;
+}
+
+.grandRow dt {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.statusLine {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.paid {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 14px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px dashed var(--hairline);
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #403b32;
+}
+
+.address strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.note {
+  margin: 16px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary {
+  background: var(--saffron);
+  color: #fff;
+}
+
+.primary:hover {
+  background: #c45f27;
+}
+
+.secondary {
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+}
+
+.secondary:hover {
+  background: var(--paper);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px 18px;
+  }
+}

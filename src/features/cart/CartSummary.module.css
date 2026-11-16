@@ -56,6 +56,13 @@
   color: var(--muted);
 }
 
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.checkout,
 .continue {
   display: inline-flex;
   align-items: center;
@@ -63,12 +70,25 @@
   width: 100%;
   min-height: 46px;
   padding: 11px 20px;
-  border: 1px solid var(--ink);
   border-radius: 6px;
-  color: var(--ink);
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
+}
+
+.checkout {
+  border: 1px solid var(--saffron);
+  background: var(--saffron);
+  color: #fff;
+}
+
+.checkout:hover {
+  background: #c45f27;
+}
+
+.continue {
+  border: 1px solid var(--ink);
+  color: var(--ink);
   background: transparent;
 }
 

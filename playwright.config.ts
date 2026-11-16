@@ -39,6 +39,7 @@ process.env.VISUAL_DATABASE_URL = visualDatabase;
 process.env.SESSION_SECRET ||= 'test-session-secret-local-only-0000000000';
 process.env.RAZORPAY_KEY_ID ||= 'rzp_test_foundation';
 process.env.RAZORPAY_KEY_SECRET ||= 'foundation-test-key-secret';
+process.env.RAZORPAY_SANDBOX ||= '1';
 process.env.COOKIE_SECURE ??= 'false';
 
 const PORT = 3100;
