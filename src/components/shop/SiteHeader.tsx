@@ -3,6 +3,7 @@ import { Search, ShoppingBag } from 'lucide-react';
 import type { Category } from '@/server/catalogue/types';
 import type { FeatureNavigationDefinition } from '@/server/features/registry';
 import { SignUpNav } from '@/features/accounts/sign-up/SignUpNav';
+import { CartCount } from '@/features/cart/CartCount';
 import { CategoryRail } from './CategoryRail';
 import styles from './SiteHeader.module.css';
 
@@ -43,7 +44,8 @@ export function SiteHeader({ categories, featureNav, activeCategory }: SiteHeade
           <SignUpNav />
           <Link className={styles.action} href="/cart">
             <ShoppingBag aria-hidden="true" size={20} strokeWidth={1.5} />
-            <span>Cart</span>
+            <span className={styles.actionLabel}>Cart</span>
+            <CartCount />
           </Link>
         </nav>
       </div>
