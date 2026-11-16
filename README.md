@@ -6,11 +6,10 @@ handlers on top of PostgreSQL, with environment-only configuration, a versioned
 migration, an idempotent seed, and a feature registry that discovers a
 capability dropped into `src/features/`.
 
-The shop runs locally. The shop itself has no hosted storefront, cloud database
-or public URL: you install and run it on your own machine. The release pipeline
-publishes one static release marker to Firebase Hosting for verification. That
-marker explains the local install path and carries no catalogue, customer or
-order data; it is not the shop.
+The shop runs locally. The repository also carries a small static release
+marker (`hosting/`) published to its own Firebase Hosting site, so the release
+pipeline has a stable URL; that marker is not the shop, and running the shop
+yourself needs no hosting account, cloud resource or Firebase configuration.
 
 ## Prerequisites
 
@@ -169,18 +168,20 @@ src/lib/            shared, framework-free helpers such as INR money
 src/server/         environment, database, catalogue, sessions, registry
 src/test/           fixture factory for unattended runs
 tests/              Playwright specs for the foundation contract
-scripts/            environment-checked Next.js runner, test runner and release marker build
-orbit/              the release pipeline's static marker deploy script
+scripts/            environment-checked Next.js runner and test runner
 ```
 
 ## Distribution
 
 The shippable form is this repository revision plus the lockfile-pinned
-dependency tree and the build output produced by that revision. There is no
-hosted deployment of the shop to configure. A person receiving the source
-follows the steps above and runs the tests to prove the package starts and the
-shop works locally.
+dependency tree and the build output produced by that revision. A person
+receiving the source follows the steps above and runs the tests to prove the
+package starts and the shop works locally.
 
-The only published page is the static release marker built by
-`npm run build:hosting` into `hosting-dist/`. It is not the shop and holds no
-product, customer or order data.
+## Release marker
+
+`npm run build:hosting` writes the deterministic static output in
+`hosting-dist/` from `hosting/index.html` and the bundled fonts. Orbit runs
+`orbit/publish.sh` to publish that marker to the project's Firebase Hosting
+site (`fir-ecom-f5081`); the site is a release marker, not a hosted copy of the
+shop.
