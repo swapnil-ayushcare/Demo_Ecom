@@ -6,8 +6,11 @@ handlers on top of PostgreSQL, with environment-only configuration, a versioned
 migration, an idempotent seed, and a feature registry that discovers a
 capability dropped into `src/features/`.
 
-The shop runs locally. There is no hosting project, cloud resource, public URL,
-Firebase configuration or publish script to create.
+The shop runs locally. There is no hosted application, cloud database or public
+storefront to create. Orbit publishes one static release marker to the
+product's own Firebase Hosting site for release verification; that page only
+explains this local install path and carries no catalogue, customer or order
+data.
 
 ## Prerequisites
 
@@ -173,6 +176,10 @@ scripts/            environment-checked Next.js runner and test runner
 
 The shippable form is this repository revision plus the lockfile-pinned
 dependency tree and the build output produced by that revision. There is no
-hosted deployment to configure. A person receiving the source follows the steps
-above and runs the tests to prove the package starts and the shop works
-locally.
+hosted deployment of the shop to configure. A person receiving the source
+follows the steps above and runs the tests to prove the package starts and the
+shop works locally.
+
+`npm run build:hosting` writes the deterministic `hosting-dist` release marker
+declared by `firebase.json`; `orbit/publish.sh` deploys only that site. The
+marker is not the shop, and the shop never depends on it.

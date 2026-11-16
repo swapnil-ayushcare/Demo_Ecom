@@ -2,6 +2,7 @@
 node_modules/
 .next/
 out/
+hosting-dist/
 *.tsbuildinfo
 next-env.d.ts
 

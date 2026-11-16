@@ -1,0 +1,9 @@
+{
+  "hosting": {
+    "site": "fir-ecom-f5081",
+    "public": "hosting-dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
+    "trailingSlash": false
+  }
+}
