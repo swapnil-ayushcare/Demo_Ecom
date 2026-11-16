@@ -1,20 +1,12 @@
-import { listCategories, listProducts } from '@/server/catalogue/service';
-import { getFeatureNavigation } from '@/server/features/registry';
-import { AppShell } from '@/components/ui/AppShell';
+import Link from 'next/link';
 import { PriceTag } from '@/components/ui/PriceTag';
 import { ProductCard } from '@/components/ui/ProductCard';
-import styles from './home.module.css';
+import type { HomeCatalogue } from './queries';
+import styles from './HomePage.module.css';
 
-export const dynamic = 'force-dynamic';
-
-export default async function HomePage() {
-  const [categories, products] = await Promise.all([listCategories(), listProducts()]);
-  const featureNav = getFeatureNavigation('shop');
-  const lowestPrice =
-    products.length > 0 ? Math.min(...products.map((product) => product.pricePaise)) : 0;
-
+export function HomePage({ categories, products, lowestPricePaise }: HomeCatalogue) {
   return (
-    <AppShell categories={categories} featureNav={featureNav}>
+    <>
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>The shop counter</p>
@@ -22,8 +14,8 @@ export default async function HomePage() {
             Everyday things, honestly priced.
           </h1>
           <p className={styles.heroText}>
-            Spices, steel, soap and paper from a shop that keeps its stock true. Browse the aisle,
-            check the rupee tag, and take your time — there is no countdown here.
+            Browse the aisle, check the rupee tag, and take your time — there is no countdown
+            here. The shelf is the stock, and the stock is kept true.
           </p>
           <div className={styles.heroRules}>
             <span>Prices in rupees</span>
@@ -47,7 +39,13 @@ export default async function HomePage() {
             </div>
             <div className={styles.noteRow}>
               <dt>Lowest rupee tag</dt>
-              <dd>{lowestPrice > 0 ? <PriceTag amountPaise={lowestPrice} size="sm" /> : '—'}</dd>
+              <dd>
+                {lowestPricePaise > 0 ? (
+                  <PriceTag amountPaise={lowestPricePaise} size="sm" />
+                ) : (
+                  '—'
+                )}
+              </dd>
             </div>
           </dl>
           <p className={styles.noteFoot}>The shelf is the stock. If it is here, it is counted.</p>
@@ -59,17 +57,21 @@ export default async function HomePage() {
           <h2 className={styles.sectionTitle} id="aisles-title">
             Walk the aisles
           </h2>
-          <p className={styles.sectionNote}>Four corners of the shop, plainly kept.</p>
+          <p className={styles.sectionNote}>Every aisle in the shop, plainly kept.</p>
         </div>
         <div className={styles.aisleGrid}>
           {categories.map((category) => (
-            <a className={styles.aisleCard} href={`/category/${category.slug}`} key={category.id}>
+            <Link
+              className={styles.aisleCard}
+              href={`/category/${category.slug}`}
+              key={category.id}
+            >
               <span className={styles.aisleCount}>{category.productCount}</span>
               <span className={styles.aisleName}>{category.name}</span>
               {category.description ? (
                 <span className={styles.aisleText}>{category.description}</span>
               ) : null}
-            </a>
+            </Link>
           ))}
         </div>
       </section>
@@ -98,6 +100,6 @@ export default async function HomePage() {
           </div>
         )}
       </section>
-    </AppShell>
+    </>
   );
 }
