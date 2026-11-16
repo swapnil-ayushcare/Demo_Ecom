@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Natural jute shopping bag with cotton handles">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="300" r="194" fill="#FFFDF8" stroke="#DED4C4"/>
+  <path d="M206 254h188l22 190a18 18 0 0 1-18 20H202a18 18 0 0 1-18-20z" fill="#D8C08C" stroke="#1D1B16" stroke-width="4"/>
+  <path d="M244 254c0-46 18-76 56-76s56 30 56 76" fill="none" stroke="#6B6358" stroke-width="10" stroke-linecap="round"/>
+  <g stroke="#B79A63" stroke-width="2">
+    <path d="M206 300h188M206 340h188M206 380h188M206 420h188"/>
+    <path d="M240 274v190M300 274v190M360 274v190"/>
+  </g>
+  <rect x="256" y="330" width="88" height="56" rx="3" fill="#FFFDF8" stroke="#1D1B16" stroke-width="3"/>
+  <text x="300" y="352" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1D1B16">JUTE</text>
+  <text x="300" y="370" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#6B6358">SHOPPING BAG</text>
+</svg>

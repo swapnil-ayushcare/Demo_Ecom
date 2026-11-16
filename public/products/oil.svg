@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Amber glass bottle of coconut hair oil with a cork stopper">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="300" r="194" fill="#FFFDF8" stroke="#DED4C4"/>
+  <rect x="252" y="150" width="96" height="46" rx="8" fill="#8A5A2B" stroke="#1D1B16" stroke-width="4"/>
+  <rect x="264" y="132" width="72" height="22" rx="8" fill="#C49A6C" stroke="#1D1B16" stroke-width="4"/>
+  <path d="M270 196h60v34l36 48v176a26 26 0 0 1-26 26H260a26 26 0 0 1-26-26V278l36-48z" fill="#C98A2E" stroke="#1D1B16" stroke-width="4"/>
+  <rect x="248" y="316" width="104" height="104" rx="4" fill="#FFFDF8"/>
+  <text x="300" y="348" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#1D1B16">COCONUT</text>
+  <text x="300" y="368" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1D1B16">HAIR OIL</text>
+  <text x="300" y="398" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#6B6358">200 ml</text>
+  <path d="M272 260l-26 34" stroke="#E8C98A" stroke-width="3" opacity=".8"/>
+</svg>

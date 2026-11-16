@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Small brass oil lamp with a lit cotton wick">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="300" r="194" fill="#FFFDF8" stroke="#DED4C4"/>
+  <path d="M164 330c0-34 62-58 136-58s136 24 136 58c0 30-60 52-136 52s-136-22-136-52z" fill="#D9A441" stroke="#1D1B16" stroke-width="4"/>
+  <path d="M210 320c0-22 40-38 90-38s90 16 90 38c0 20-40 34-90 34s-90-14-90-34z" fill="#B9812A"/>
+  <path d="M300 282c-6-26 10-40 0-62" fill="none" stroke="#1D1B16" stroke-width="4"/>
+  <path d="M300 220c-20 12-24 32-4 44 18-10 22-30 4-44z" fill="#D96C2F"/>
+  <path d="M300 232c-8 8-8 18 0 24 8-6 8-16 0-24z" fill="#F2B544"/>
+  <path d="M286 382h28l-6 30h-16z" fill="#D9A441" stroke="#1D1B16" stroke-width="4"/>
+  <ellipse cx="300" cy="418" rx="48" ry="10" fill="#DED4C4"/>
+</svg>

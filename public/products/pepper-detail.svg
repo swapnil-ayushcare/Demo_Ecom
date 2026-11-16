@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Close view of whole black peppercorns">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="300" r="212" fill="#FFFDF8" stroke="#DED4C4"/>
+  <g fill="#1D1B16">
+    <ellipse cx="236" cy="214" rx="46" ry="38"/><ellipse cx="334" cy="196" rx="42" ry="34"/>
+    <ellipse cx="408" cy="260" rx="40" ry="34"/><ellipse cx="178" cy="302" rx="38" ry="33"/>
+    <ellipse cx="286" cy="290" rx="50" ry="41"/><ellipse cx="374" cy="342" rx="44" ry="36"/>
+    <ellipse cx="214" cy="390" rx="43" ry="35"/><ellipse cx="304" cy="414" rx="46" ry="37"/>
+    <ellipse cx="410" cy="414" rx="36" ry="30"/>
+  </g>
+  <g fill="none" stroke="#6B6358" stroke-width="2.5" opacity=".7">
+    <path d="M210 200q24 10 48 2"/><path d="M312 184q22 8 40 0"/><path d="M264 278q22 10 44 2"/>
+    <path d="M352 330q22 8 40 0"/><path d="M192 380q20 8 40 2"/><path d="M282 402q22 8 42 2"/>
+  </g>
+</svg>

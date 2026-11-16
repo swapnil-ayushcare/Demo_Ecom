@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Glass jar of whole black peppercorns">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="292" r="176" fill="#FFFDF8" stroke="#DED4C4"/>
+  <rect x="216" y="150" width="168" height="42" rx="8" fill="#1D1B16"/>
+  <rect x="228" y="138" width="144" height="24" rx="10" fill="#6B6358"/>
+  <path d="M206 202h188v214a34 34 0 0 1-34 34H240a34 34 0 0 1-34-34z" fill="#FFFDF8" stroke="#1D1B16" stroke-width="4"/>
+  <path d="M206 232h188" stroke="#DED4C4" stroke-width="3"/>
+  <g fill="#1D1B16">
+    <circle cx="244" cy="292" r="17"/><circle cx="286" cy="278" r="15"/><circle cx="328" cy="292" r="18"/>
+    <circle cx="368" cy="274" r="14"/><circle cx="258" cy="330" r="16"/><circle cx="304" cy="322" r="19"/>
+    <circle cx="350" cy="332" r="16"/><circle cx="380" cy="314" r="13"/><circle cx="232" cy="360" r="13"/>
+    <circle cx="280" cy="366" r="17"/><circle cx="330" cy="366" r="15"/><circle cx="374" cy="358" r="17"/>
+    <circle cx="252" cy="406" r="15"/><circle cx="300" cy="410" r="18"/><circle cx="352" cy="404" r="14"/>
+  </g>
+  <rect x="236" y="268" width="128" height="76" rx="3" fill="#F2B544" transform="rotate(-4 300 306)"/>
+  <text x="300" y="298" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#1D1B16" transform="rotate(-4 300 306)">MALABAR</text>
+  <text x="300" y="318" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#1D1B16" transform="rotate(-4 300 306)">BLACK PEPPER</text>
+  <text x="300" y="335" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#6B6358" transform="rotate(-4 300 306)">200 g</text>
+</svg>

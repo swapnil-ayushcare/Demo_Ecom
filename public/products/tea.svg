@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Pouch of Assam tea beside a glass cup of dark tea">
+  <rect width="600" height="600" fill="#F7F1E7"/>
+  <circle cx="300" cy="296" r="182" fill="#FFFDF8" stroke="#DED4C4"/>
+  <path d="M168 190h154l16 48H152z" fill="#1F5C4A"/>
+  <path d="M152 238h186v180l-20 28H172l-20-28z" fill="#FFFDF8" stroke="#1D1B16" stroke-width="4"/>
+  <rect x="178" y="286" width="134" height="102" rx="3" fill="#1F5C4A"/>
+  <text x="245" y="326" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#FFFDF8">ASSAM</text>
+  <text x="245" y="350" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#FFFDF8">CTC TEA</text>
+  <text x="245" y="372" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#F2B544">500 g</text>
+  <path d="M374 306h104v86a42 42 0 0 1-42 42h-20a42 42 0 0 1-42-42z" fill="#FFFDF8" stroke="#1D1B16" stroke-width="4"/>
+  <path d="M478 326h18a26 26 0 0 1 0 52h-18" fill="none" stroke="#1D1B16" stroke-width="4"/>
+  <path d="M392 340h68v52a24 24 0 0 1-24 24h-20a24 24 0 0 1-24-24z" fill="#6B3C1E"/>
+  <path d="M406 280c-10-18 10-26 0-44M438 280c-10-18 10-26 0-44" fill="none" stroke="#6B6358" stroke-width="3" stroke-linecap="round"/>
+</svg>
