@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { Search, ShoppingBag, UserRound } from 'lucide-react';
+import { Search, ShoppingBag } from 'lucide-react';
 import type { Category } from '@/server/catalogue/types';
 import type { FeatureNavigationDefinition } from '@/server/features/registry';
+import { SignUpNav } from '@/features/accounts/sign-up/SignUpNav';
 import { CategoryRail } from './CategoryRail';
 import styles from './SiteHeader.module.css';
 
@@ -39,10 +40,7 @@ export function SiteHeader({ categories, featureNav, activeCategory }: SiteHeade
         </form>
 
         <nav className={styles.actions} aria-label="Account and cart">
-          <Link className={styles.action} href="/account">
-            <UserRound aria-hidden="true" size={20} strokeWidth={1.5} />
-            <span>Account</span>
-          </Link>
+          <SignUpNav />
           <Link className={styles.action} href="/cart">
             <ShoppingBag aria-hidden="true" size={20} strokeWidth={1.5} />
             <span>Cart</span>

@@ -1,8 +1,13 @@
 import { query } from './db';
-import { hashToken, newOpaqueToken } from './passwords';
+import { hashToken, newOpaqueToken, verifyPassword } from './passwords';
 
 export const SESSION_COOKIE_NAME = 'demo_ecom_session';
 const DEFAULT_TTL_SECONDS = 60 * 60 * 24 * 30;
+
+// Verified for every unknown email so a missing account and a wrong password
+// take the same work and the same refusal.
+const DUMMY_PASSWORD_HASH =
+  'scrypt$16384$8$1$pdKkopV9VEuALr9Gzzr/+A==$BXg0N1kGEEZKjk3xZVY4aptCNOVmawP4Lojut8TyY/nrorhQyKjrjwiS+AZaOcJutj7AELXMw5Sb4lJfLYn1gQ==';
 
 export interface SessionCookieOptions {
   httpOnly: true;
@@ -75,6 +80,53 @@ export async function establishSession(
   };
 }
 
+export type SignInResult =
+  | { ok: true; user: SessionUser; session: EstablishedSession }
+  | { ok: false };
+
+/**
+ * Verify an email and password, then open a server-side session. The result
+ * is deliberately uninformative when either half is wrong.
+ */
+export async function signInCustomer(email: string, password: string): Promise<SignInResult> {
+  const normalizedEmail = email.trim().toLowerCase();
+  const result = await query<{
+    id: string;
+    name: string;
+    email: string;
+    role: 'customer' | 'admin';
+    password_hash: string;
+  }>(
+    `SELECT id, name, email, role, password_hash
+       FROM users
+      WHERE lower(email) = $1
+      LIMIT 1`,
+    [normalizedEmail],
+  );
+
+  const row = result.rows[0];
+  const storedHash = row?.password_hash ?? DUMMY_PASSWORD_HASH;
+  const passwordMatches = await verifyPassword(password, storedHash);
+
+  if (!row || !passwordMatches) {
+    return { ok: false };
+  }
+
+  const session = await establishSession(row.id);
+  return {
+    ok: true,
+    user: { id: row.id, name: row.name, email: row.email, role: row.role },
+    session,
+  };
+}
+
+export async function signOutCustomer(token: string | null | undefined): Promise<void> {
+  if (!token) {
+    return;
+  }
+  await revokeSession(token);
+}
+
 export async function getSessionUser(token: string): Promise<SessionUser | null> {
   if (!token) {
     return null;
@@ -119,7 +171,9 @@ export function serializeSessionCookie(session: EstablishedSession): string {
   return parts.join('; ');
 }
 
-export function clearSessionCookie(secure = process.env.NODE_ENV === 'production'): string {
+export function clearSessionCookie(
+  secure = process.env.NODE_ENV === 'production' && process.env.COOKIE_SECURE !== 'false',
+): string {
   const parts = [
     `${SESSION_COOKIE_NAME}=`,
     'Path=/',
