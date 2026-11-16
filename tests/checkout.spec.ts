@@ -146,7 +146,7 @@ test.beforeAll(async () => {
   db = new Client({ connectionString });
   await db.connect();
 
-  server = await startServer(3107, {
+  server = await startServer(3109, {
     DATABASE_URL: connectionString,
     RAZORPAY_SANDBOX: '1',
     RAZORPAY_KEY_ID: SANDBOX_KEY_ID,
