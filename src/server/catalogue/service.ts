@@ -130,8 +130,22 @@ export async function listProducts(options: ProductListOptions = {}): Promise<Pr
     params.push(likePattern(options.search.trim()));
     const position = params.length;
     conditions.push(
-      `(p.name ILIKE $${position} ESCAPE '\\' OR p.description ILIKE $${position} ESCAPE '\\' OR c.name ILIKE $${position} ESCAPE '\\')`,
+      `(p.name ILIKE $${position} ESCAPE '\\' OR p.description ILIKE $${position} ESCAPE '\\')`,
     );
+  }
+
+  if (options.minPricePaise !== undefined) {
+    params.push(options.minPricePaise);
+    conditions.push(`COALESCE(pr.amount_paise, 0) >= $${params.length}`);
+  }
+
+  if (options.maxPricePaise !== undefined) {
+    params.push(options.maxPricePaise);
+    conditions.push(`COALESCE(pr.amount_paise, 0) <= $${params.length}`);
+  }
+
+  if (options.inStockOnly) {
+    conditions.push(`COALESCE(sl.quantity, 0) > 0`);
   }
 
   const where = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
