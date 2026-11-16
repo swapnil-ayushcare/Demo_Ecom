@@ -159,8 +159,11 @@ contract lives in `src/server/features/registry.ts`.
 db/                 migration SQL, migration runner, seed and seed data
 public/products/    catalogue images shipped with the seed
 src/app/            Next.js pages, layout and API route handlers
+src/app/(shop)/     the customer-facing shop shell and its routes
+src/components/shop/  SiteHeader and CategoryRail shared by the storefront
 src/components/ui/  AppShell, PriceTag and ProductCard
 src/features/       discovered capabilities (feature.json + page.html)
+src/features/catalogue/home/  home catalogue reads and the home composition
 src/lib/            shared, framework-free helpers such as INR money
 src/server/         environment, database, catalogue, sessions, registry
 src/test/           fixture factory for unattended runs
